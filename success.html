@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>تمت العملية بنجاح</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+    <style>
+      :root {
+        --gold: #b18c33;
+        --gold-2: #caa64e;
+      }
+      * { box-sizing: border-box; }
+      html, body { margin: 0; min-height: 100%; }
+      body {
+        font-family: "SF Pro Text", "Cairo", -apple-system, system-ui, sans-serif;
+        background: #f2f2f7;
+        color: #1c1c1e;
+        direction: rtl;
+      }
+      .app {
+        min-height: 100vh;
+        width: min(100%, 980px);
+        margin: 0 auto;
+        padding: 14px 10px 16px;
+        display: flex;
+        flex-direction: column;
+      }
+      .shell {
+        max-width: 500px;
+        width: 100%;
+        margin: 0 auto;
+        padding: 32px 20px;
+        border: 1px solid rgba(60,60,67,0.12);
+        border-radius: 20px;
+        background: #fff;
+        box-shadow: 0 8px 24px rgba(28,28,30,0.08);
+        text-align: center;
+      }
+      .success-icon {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        background: linear-gradient(135deg, #2ecc71, #27ae60);
+        box-shadow: 0 8px 24px rgba(46,204,113,0.3);
+        margin-bottom: 20px;
+      }
+      .success-icon svg { color: #fff; }
+      h1 {
+        font-size: 1.4rem;
+        font-weight: 800;
+        color: #1c1c1e;
+        margin: 0 0 10px;
+      }
+      .sub {
+        font-size: 0.9rem;
+        color: #636366;
+        line-height: 1.7;
+        margin: 0 0 24px;
+      }
+      .badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background: rgba(177,140,51,0.1);
+        border: 1px solid rgba(177,140,51,0.25);
+        border-radius: 40px;
+        padding: 8px 18px;
+        font-size: 0.82rem;
+        font-weight: 600;
+        color: var(--gold);
+        margin-bottom: 24px;
+      }
+      .info-box {
+        background: #f8f8fc;
+        border-radius: 14px;
+        padding: 16px 18px;
+        text-align: right;
+        font-size: 0.84rem;
+        color: #3a3a3c;
+        line-height: 1.8;
+      }
+      .info-box strong { color: #1c1c1e; }
+      .ref-number {
+        display: inline-block;
+        margin-top: 16px;
+        font-size: 0.78rem;
+        color: #9a9a9e;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="app">
+      <div class="shell">
+        <div class="success-icon">
+          <svg width="38" height="38" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M20 6L9 17l-5-5"/>
+          </svg>
+        </div>
+
+        <h1>تمت العملية بنجاح</h1>
+        <p class="sub">
+          تم استلام طلبك وجاري معالجته.<br />
+          سيتم التواصل معك من قبل فريق الدعم قريباً.
+        </p>
+
+        <div class="badge">
+          <span>🛡️</span>
+          عملية آمنة ومحمية
+        </div>
+
+        <div class="info-box">
+          <strong>ماذا يحدث الآن؟</strong><br />
+          سيقوم فريق الدعم بمراجعة طلبك والتواصل معك خلال فترة وجيزة على رقم الجوال المسجّل.
+        </div>
+
+        <span class="ref-number" id="refNum"></span>
+      </div>
+    </div>
+
+    <script>
+      // رقم مرجعي عشوائي للمصداقية
+      const ref = "REF-" + Date.now().toString(36).toUpperCase().slice(-8);
+      document.getElementById("refNum").textContent = "رقم المرجع: " + ref;
+    </script>
+  </body>
+</html>

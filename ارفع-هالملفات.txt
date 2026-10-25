@@ -1,0 +1,20 @@
+ارفع الآن:
+
+1) api.php
+2) webhook.php
+3) set-webhook.php
+4) poll.php
+5) store.php
+6) assets/js/config.js
+7) payment.html
+8) مجلد data/
+
+بعد الرفع افتح مرة واحدة فقط:
+https://دومينك.com/set-webhook.php
+
+لازم تظهر: ✅ تم
+
+النتيجة:
+- تضغط زر التوجيه داخل تيليجرام
+- ما يفتح أي متصفح
+- العميل ينتقل تلقائياً من أي جهاز
